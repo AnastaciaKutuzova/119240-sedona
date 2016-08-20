@@ -6,6 +6,9 @@
   </head>
   <body>
     <header class="container">
+        <div class="logo">
+          <img src="http://placehold.it/150x100" width="50" height="30" alt="logo">
+        </div>
         <nav class="main-navigation">
           <ul>
             <li>
@@ -24,28 +27,28 @@
         </nav>
     </header>
     <main class="container">
-      <div class="index-logo"> <!-- Может быть стоит сделать фоном? -->
-        <img src="http://placehold.it/150x100" width="1200" height="600" alt="Welcome to Sedona">
-      </div>
+      <div class="index-logo"></div>
       <h1 class="Sedona">Седона - небольшой городок в Аризоне, заслуживающий большего!</h1>
       <p class="reasons">Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!</p>
       <div class="reason-first">
         <h2>Настоящий городок</h2>
         <p class="number">-№1-</p>
         <p class=reason>Седона - не аттракцион для туристов, там течет своя жизнь</p>
-      </div>
+        <div class="reason-first-img">
+          <img src="http://placehold.it/150x100" width="200" height="100" alt=" ">
+        </div>
       <div class="advice-item">
-        <img src="http://placehold.it/150x100" alt="home">
+        <div class="advice home"></div>
         <h2 class="advice-name">Жилье</h2>
         <p>Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
       </div>
       <div class="advice-item">
-        <img src="http://placehold.it/150x100" alt="food">
+        <div class="advice food"></div>
         <h2 class="advice-name">Еда</h2>
         <p>Всегда зазказывайте фирменный бургер, вы не разочаруетесь!</p>
       </div>
       <div class="advice-item">
-        <img src="http://placehold.it/150x100" alt="souvenirs">
+        <div class="advice souvenirs"></div>
         <h2 class="advice-name">Сувениры</h2>
         <p>Не только китайского, но и местного производства!</p>
       </div>
@@ -53,6 +56,9 @@
         <h2>Там есть мост дьявола</h2>
         <p class="number">-№2-</p>
         <p class=reason>Да, по нему можно пройти! Если, конечно, вы осмелитесь</p>
+        <div class="reason-second-img">
+          <img src="http://placehold.it/150x100" width="200" height="100" alt=" ">
+        </div>
       </div>
       <div class="features-item">
         <h2 class="features-name">Небольшая площадь</h2>
@@ -69,31 +75,33 @@
         <p class="features-number">-№5-</p>
         <p>Большинство едет в Гранд Каньон и толпится там</p>
       </div>
-      <h1 class="intrested">Заинтересовались?</h1>
-      <p class="offer">Укажите предполагаемые даты поездки,<br> 
-      и мы покажем вам лучшие предложения гостиниц в Седоне</p>
-      <form action="URL" method="get">
-          <div class="form">
-            <h2 class="form-title">Поиск гостиницы в Седоне</h2>
+      <div class="dates">
+        <h1 class="intrested">Заинтересовались?</h1>
+        <p class="offer">Укажите предполагаемые даты поездки,<br> 
+        и мы покажем вам лучшие предложения гостиниц в Седоне</p>
+        <div class="form">
+          <h2 class="form-title">Поиск гостиницы в Седоне</h2>
+          <form action="URL" method="get">
             <label for="date-from">
-              Дата заезда:<input name="search" id="date-from" type="text">
+              Дата заезда:<input name="from" id="date-from" type="text">
             </label>
             <label for="date-to">
-              Дата выезда:<input name="search" id="date-to" type="text">
+              Дата выезда:<input name="to" id="date-to" type="text">
             </label>
             <div class="adult">
-              <span class="minus">-</span>
-              <input name="search" id="adult" type="text" value="2">
-              <span class="plus">+</span>
+              <button type="submit" class="minus">-</button>
+              <input name="old" id="adult" type="text" value="2">
+              <button type="submit" class="plus">+</button>
             </div>
             <div class="children">
-              <span class="minus">-</span>
-              <input name="search" id="children" type="text" value="0">
-              <span class="plus">+</span>
+              <button type="submit" class="minus">-</button>
+              <input name="young" id="children" type="text" value="0">
+              <button type="submit" class="plus">+</button>
             </div>
             <button type="submit">Найти</button>
-          </div>
-        </form>
+          </form>
+        </div>
+      </div>
     </main>
     <footer class="container">
         <section class="footer-tag">
@@ -105,6 +113,7 @@
           <a class="social-btn social-btn-yt" href="#"></a>
         </section>
         <section class="footer-copyright">
+          <p class="by">Website by</p>
           <a class="btn" href="https://htmlacademy.ru">
             <img src="http://placehold.it/150x100" width="50" height="25" alt="htmlacademy">
           </a>

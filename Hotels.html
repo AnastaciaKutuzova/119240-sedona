@@ -28,66 +28,102 @@
             <form action="URL" method="get">
               <div class="filter-infrastructure">
                 <h2 class="form">Инфраструктура</h2>
-                <input name="filter" id="pool" type="checkbox" checked>
-                <label for="pool">Бассейн</label>
-                <input name="filter" id="parking" type="checkbox">
-                <label for="parking">Парковка</label>
-                <input name="filter" id="wifi" type="checkbox">
-                <label for="wifi">Wi-Fi</label>
+                <input name="pool" id="pool-id" type="checkbox" checked>
+                <label for="pool-id">Бассейн</label>
+                <input name="parking" id="parking-id" type="checkbox">
+                <label for="parking-id">Парковка</label>
+                <input name="wifi" id="wifi-id" type="checkbox">
+                <label for="wifi-id">Wi-Fi</label>
               </div>
               <div class="filter-type">
                 <h2 class="form">Тип жилья:</h2>
-                <input name="filter" id="hotel" type="checkbox" checked>
-                <label for="hotel">Гостиница</label>
-                <input name="filter" id="motel" type="checkbox" checked>
-                <label for="motel">Мотель</label>
-                <input name="filter" id="apartment" type="checkbox" checked>
-                <label for="apartment">Апартаменты</label>
+                <input name="hotel" id="hotel-id" type="checkbox" checked>
+                <label for="hotel-id">Гостиница</label>
+                <input name="motel" id="motel-id" type="checkbox" checked>
+                <label for="motel-id">Мотель</label>
+                <input name="apartment" id="apartment-id" type="checkbox" checked>
+                <label for="apartment-id">Апартаменты</label>
               </div>
               <h2 class="form">Стоимость в сутки (р):</h2>
-              <div class="to-from"> <!-- Может проще вставить форму в ячейки таблицы? -->
-                <input name="filter" id="from" type="text" value="от 0">
-                <input name="filter" id="to" type="text" value="до 3000">
+              <div class="price">
+                <div class="filter-range">
+                  <div class="filter-range-title">Стоимость в сутки (р):</div>
+                  <div class="price-controls">
+                    <label class="min-price">от <input type="text" name="min-price" value="0"></label>
+                    <label class="max-price">до <input type="text" name="max-price" value="3000"></label>
+                  </div>
+                  <div class="range-controls">
+                    <div class="scale">
+                      <div class="bar"></div>
+                    </div>
+                    <div class="range-toggle range-toggle-min"></div>
+                    <div class="range-toggle range-toggle-max"></div>
+                  </div>
+                </div>
               </div>
-              <input name="filter" id="cost" type="range" min="0" max="4000" step="10" value="3000">
               <button type="submit" id="show" name="filter">Показать</button>
             </form>
         </div>
         <div class="sort-by">
           <p class="sort-by-result">найдено:3</p>
           <p class="sort-by-sort">сортировка:</p>
-          <a href="#" class="text current">по цене</a>
-          <a href="#" class="text">по типу</a>
-          <a href="#" class="text">по рейтингу</a>
-          <a href="#" class="triangle up"></a>
-          <a href="#" class="triangle down"></a>
+          <ul class="sort">
+            <li>
+              <a href="#" class="text current">по цене</a>
+            </li>
+            <li>
+              <a href="#" class="text">по типу</a>
+            </li>
+            <li>
+              <a href="#" class="text">по рейтингу</a>
+            </li>
+          </ul>
+          <div class="up-down">
+            <a href="#" class="triangle up"></a>
+            <a href="#" class="triangle down"></a>
+          </div>
         </div>
-        <article class="hotels">
-          <h2 class="hotels-name">Amara resort & Spa</h2>
-          <p class="hotels-type">гостиница</p>
-          <p class="hotels-price">от 3500 р.</p>
-          <a href="#" class="hotels-details">Подробнее</a>
-          <a href="#" class="hotels-booking">Забронировать</a>
-          <p class="hotels-rating">Рейтинг: 8,5</p>
-          <img src="http://placehold.it/150x100" width="200" height="120" alt="amara">
+        <article class="hotels amara">
+          <div class="left"> 
+            <h2 class="hotels-name">Amara resort & Spa</h2>
+            <p class="hotels-type">гостиница</p>
+            <p class="hotels-price">от 3500 р.</p>
+            <a href="#" class="hotels-details">Подробнее</a>
+            <a href="#" class="hotels-booking">Забронировать</a>
+            <img src="http://placehold.it/150x100" width="200" height="120" alt="amara">
+          </div>
+          <div class="right">
+            <p class="hotels-rating">Рейтинг: 8,5</p>
+            <div class="stars"></div>
+          </div>
         </article>
-        <article class="hotels">
-          <h2 class="hotels-name">Desert Quail Inn</h2>
-          <p class="hotels-type">мотель</p>
-          <p class="hotels-price">от 2000 р.</p>
-          <a href="#" class="hotels-details">Подробнее</a>
-          <a href="#" class="hotels-booking">Забронировать</a>
-          <p class="hotels-rating">Рейтинг: 8,9</p>
-          <img src="http://placehold.it/150x100" width="200" height="120" alt="desert">
+        <article class="hotels desert">
+          <div class="left">
+            <h2 class="hotels-name">Desert Quail Inn</h2>
+            <p class="hotels-type">мотель</p>
+            <p class="hotels-price">от 2000 р.</p>
+            <a href="#" class="hotels-details">Подробнее</a>
+            <a href="#" class="hotels-booking">Забронировать</a>
+            <img src="http://placehold.it/150x100" width="200" height="120" alt="desert">
+          </div>
+          <div class="right">
+            <p class="hotels-rating">Рейтинг: 8,9</p>
+            <div class="stars"></div>
+          </div>     
         </article>
-        <article class="hotels">
-          <h2 class="hotels-name">Villas at Poco Diablo</h2>
-          <p class="hotels-type">апартаменты</p>
-          <p class="hotels-price">от 4000 р.</p>
-          <a href="#" class="hotels-details">Подробнее</a>
-          <a href="#" class="hotels-booking">Забронировать</a>
-          <p class="hotels-rating">Рейтинг: 9,2</p>
-          <img src="http://placehold.it/150x100" width="200" height="120" alt="villas">
+        <article class="hotels diablo">
+          <div class="left">
+            <h2 class="hotels-name">Villas at Poco Diablo</h2>
+            <p class="hotels-type">апартаменты</p>
+            <p class="hotels-price">от 4000 р.</p>
+            <a href="#" class="hotels-details">Подробнее</a>
+            <a href="#" class="hotels-booking">Забронировать</a>
+            <img src="http://placehold.it/150x100" width="200" height="120" alt="villas">
+          </div>
+          <div class="right">
+            <p class="hotels-rating">Рейтинг: 9,2</p>
+            <div class="stars"></div>
+          </div> 
         </article>
     </main>
     <footer class="container">
