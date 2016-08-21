@@ -3,9 +3,13 @@
   <head>
     <meta charset="utf-8">
     <title>Welcome to Sedona</title>
+    <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
     <header class="container">
+        <div class="logo">
+          <img src="img/mini-logo.png" width="140" height="70" alt="logo">
+        </div>
         <nav class="main-navigation">
           <ul>
             <li>
@@ -27,7 +31,7 @@
         <div class="filters">
             <form action="URL" method="get">
               <div class="filter-infrastructure">
-                <h2 class="form">Инфраструктура</h2>
+                <h3 class="form">Инфраструктура</h3>
                 <input name="pool" id="pool-id" type="checkbox" checked>
                 <label for="pool-id">Бассейн</label>
                 <input name="parking" id="parking-id" type="checkbox">
@@ -36,7 +40,7 @@
                 <label for="wifi-id">Wi-Fi</label>
               </div>
               <div class="filter-type">
-                <h2 class="form">Тип жилья:</h2>
+                <h3 class="form">Тип жилья:</h3>
                 <input name="hotel" id="hotel-id" type="checkbox" checked>
                 <label for="hotel-id">Гостиница</label>
                 <input name="motel" id="motel-id" type="checkbox" checked>
@@ -44,7 +48,7 @@
                 <input name="apartment" id="apartment-id" type="checkbox" checked>
                 <label for="apartment-id">Апартаменты</label>
               </div>
-              <h2 class="form">Стоимость в сутки (р):</h2>
+              <h3 class="form">Стоимость в сутки (р):</h3>
               <div class="price">
                 <div class="filter-range">
                   <div class="filter-range-title">Стоимость в сутки (р):</div>
@@ -65,7 +69,7 @@
             </form>
         </div>
         <div class="sort-by">
-          <p class="sort-by-result">найдено:3</p>
+          <h2 class="sort-by-result">найдено:3</h2>
           <p class="sort-by-sort">сортировка:</p>
           <ul class="sort">
             <li>
@@ -85,12 +89,12 @@
         </div>
         <article class="hotels amara">
           <div class="left"> 
+            <img src="img/Amara.jpg" width="135" height="90" alt="amara">
             <h2 class="hotels-name">Amara resort & Spa</h2>
             <p class="hotels-type">гостиница</p>
             <p class="hotels-price">от 3500 р.</p>
             <a href="#" class="hotels-details">Подробнее</a>
             <a href="#" class="hotels-booking">Забронировать</a>
-            <img src="http://placehold.it/150x100" width="200" height="120" alt="amara">
           </div>
           <div class="right">
             <p class="hotels-rating">Рейтинг: 8,5</p>
@@ -99,12 +103,12 @@
         </article>
         <article class="hotels desert">
           <div class="left">
+            <img src="img/Desert.jpg" width="135" height="90" alt="desert">
             <h2 class="hotels-name">Desert Quail Inn</h2>
             <p class="hotels-type">мотель</p>
             <p class="hotels-price">от 2000 р.</p>
             <a href="#" class="hotels-details">Подробнее</a>
             <a href="#" class="hotels-booking">Забронировать</a>
-            <img src="http://placehold.it/150x100" width="200" height="120" alt="desert">
           </div>
           <div class="right">
             <p class="hotels-rating">Рейтинг: 8,9</p>
@@ -113,12 +117,12 @@
         </article>
         <article class="hotels diablo">
           <div class="left">
+            <img src="img/Diablo.jpg" width="135" height="90" alt="villas">
             <h2 class="hotels-name">Villas at Poco Diablo</h2>
             <p class="hotels-type">апартаменты</p>
             <p class="hotels-price">от 4000 р.</p>
             <a href="#" class="hotels-details">Подробнее</a>
             <a href="#" class="hotels-booking">Забронировать</a>
-            <img src="http://placehold.it/150x100" width="200" height="120" alt="villas">
           </div>
           <div class="right">
             <p class="hotels-rating">Рейтинг: 9,2</p>
@@ -128,7 +132,7 @@
     </main>
     <footer class="container">
         <section class="footer-tag">
-          <p>#visitsedona</p>
+          <h2>#visitsedona</h2>
         </section>
         <section class="footer-social">
           <a class="social-btn social-btn-tw" href="#"></a>
@@ -136,8 +140,9 @@
           <a class="social-btn social-btn-yt" href="#"></a>
         </section>
         <section class="footer-copyright">
+          <p class="by">Website by</p>
           <a class="btn" href="https://htmlacademy.ru">
-            <img src="http://placehold.it/150x100" width="50" height="25" alt="htmlacademy">
+            <img src="img/htmlacademy.png" width="115" height="40" alt="htmlacademy">
           </a>
         </section>
     </footer>
